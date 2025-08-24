@@ -315,7 +315,7 @@ jobs:
           tag_name: "v${{ steps.getdate-peninsula.outputs.DATE }}"
           name: "🗺️ ${{ steps.release-getdate-osm.outputs.DATE_OSM }}"
           body: |
-            🧭 Mapa compilado para Garmin eTrex 22x/30x/32x 🛰️
+            🧭 Mapa compilado para Garmin eTrex 22x/30x/32x / GPSMap 65/66/67 🛰️
             📅 Fecha del build: `${{ steps.getdate-peninsula.outputs.DATE }}`
             🗺️ Datos de OpenStreetMap: `${{ steps.release-getdate-osm.outputs.DATE_OSM }}`
 
