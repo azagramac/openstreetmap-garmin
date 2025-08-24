@@ -7,7 +7,7 @@ on:
       - 'README.md'
   workflow_dispatch:
   schedule:
-    - cron: '0 19 * * 5'
+    - cron: '0 20 * * 5'
 
 env:
   MKGMAP_VERSION: r4923
@@ -218,6 +218,7 @@ jobs:
           
       - name: 🧭 Build OSM map - Spain, Mainland 🇪🇸
         run: |
+          export LANG=C.UTF-8
           java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
@@ -228,7 +229,7 @@ jobs:
             --series-name="OpenStreetMap - España península" \
             --mapname=63240001 \
             --overview-mapname=ESP_OVR \
-            --description="OSM España península - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
+            --description="OSM España - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
@@ -250,6 +251,7 @@ jobs:
 
       - name: 🧭 Build OSM map - Spain, Canary Islands 🇮🇨
         run: |
+          export LANG=C.UTF-8
           java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
@@ -260,7 +262,7 @@ jobs:
             --series-name="OpenStreetMap - España Islas Canarias" \
             --mapname=63240002 \
             --overview-mapname=ESP_OVR_CAN \
-            --description="OSM España Islas Canarias - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
+            --description="OSM Islas Canarias - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
@@ -282,6 +284,7 @@ jobs:
 
       - name: 🧭 Build OSM map - Spain, Balearic Islands 🏝️
         run: |
+          export LANG=C.UTF-8
           java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
@@ -292,7 +295,7 @@ jobs:
             --series-name="OpenStreetMap - España Islas Baleares" \
             --mapname=63240003 \
             --overview-mapname=ESP_OVR_BAL \
-            --description="OSM España Islas Baleares - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
+            --description="OSM Islas Baleares - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
