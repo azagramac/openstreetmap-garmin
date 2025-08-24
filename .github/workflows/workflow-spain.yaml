@@ -230,7 +230,7 @@ jobs:
             --mapname=63240001 \
             --overview-mapname=ESP_OVR \
             --description="OSM España - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
-            --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
+            --copyright-message="© 2025 azagramac - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
             --region-name=España \
@@ -263,7 +263,7 @@ jobs:
             --mapname=63240002 \
             --overview-mapname=ESP_OVR_CAN \
             --description="OSM Islas Canarias - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
-            --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
+            --copyright-message="© 2025 azagramac - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
             --region-name=Canarias \
@@ -296,7 +296,7 @@ jobs:
             --mapname=63240003 \
             --overview-mapname=ESP_OVR_BAL \
             --description="OSM Islas Baleares - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
-            --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
+            --copyright-message="© 2025 azagramac - OpenStreetMap contributors" \
             --country-name=España \
             --country-abbr=ES \
             --region-name=Baleares \
