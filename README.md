@@ -41,6 +41,8 @@ Compilación de mapas .img compatibles con dispositivos Garmin eTrex 22x / 30x /
 > ⚠️ Nota: En memoria interna del dispositivo solo se reconoce un archivo .img llamado `gmapsupp.img`
 > En tarjeta SD puedes tener varios mapas con diferentes nombres.
 
+> ⚠️ Nota: en los dispositivos GPSMAP como el 66 (probado en 66st), hay que copiar el fichero `*-gmapsupp.img`, renombrarlo a `gmapsupp.img`, y copiarlo a `Garmin` en la tarjeta MicroSD. No copiar a la memoria interna del GPSMAP!!!. 
+
 ### ⚙️ Activación del mapa en el dispositivo Garmin
 <img width="240" height="320" alt="imagen" src="https://github.com/user-attachments/assets/0e9a8318-0652-4c84-ad09-519cead889cb" />
 <img width="240" height="320" alt="imagen" src="https://github.com/user-attachments/assets/6fd81662-9777-4603-9a51-740d966a42c5" />
