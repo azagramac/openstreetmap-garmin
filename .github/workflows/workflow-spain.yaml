@@ -225,10 +225,9 @@ jobs:
             --family-id=${{ steps.fid-peninsula.outputs.fid }} \
             --product-id=1 \
             --family-name="OSM España" \
-            --series-name="OpenStreetMap - España" \
+            --series-name="OpenStreetMap - España península" \
             --mapname=63240001 \
             --overview-mapname=ESP_OVR \
-            --mapset-name="OSM España Península" \
             --description="OSM España península - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}"
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --description="Mapa España Península, build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
@@ -259,10 +258,9 @@ jobs:
             --family-id=${{ steps.fid-canarias.outputs.fid }} \
             --product-id=1 \
             --family-name="OSM Canarias" \
-            --series-name="OpenStreetMap - Canarias" \
+            --series-name="OpenStreetMap - España Islas Canarias" \
             --mapname=63240002 \
             --overview-mapname=ESP_OVR_CAN \
-            --mapset-name="OSM España Islas Canarias" \
             --description="OSM España Islas Canarias - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}"
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --description="Mapa Canarias, build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
@@ -293,10 +291,9 @@ jobs:
             --family-id=${{ steps.fid-baleares.outputs.fid }} \
             --product-id=1 \
             --family-name="OSM Baleares" \
-            --series-name="OpenStreetMap - Baleares" \
+            --series-name="OpenStreetMap - España Islas Baleares" \
             --mapname=63240003 \
             --overview-mapname=ESP_OVR_BAL \
-            --mapset-name="OSM España Islas Baleares" \
             --description="OSM España Islas Baleares - build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}"
             --copyright-message="© azagramac 2025 - OpenStreetMap contributors" \
             --description="Mapa Baleares, build ${{ steps.release-getdate-osm.outputs.DATE_OSM }}" \
