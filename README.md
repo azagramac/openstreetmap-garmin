@@ -17,6 +17,20 @@ Compilación de mapas .img compatibles con dispositivos Garmin eTrex 22x / 30x /
 
 ---
 
+## 📱 Dispositivos compatibles
+
+| 🛰️ Dispositivo            | 💾 Memoria interna               | 💿 Tarjeta SD / microSD         | 📝 Notas |
+|----------------------------|---------------------------------|--------------------------------|----------|
+| Garmin eTrex 20 / 22x      | ✅ Solo `gmapsupp.img`           | ✅ Acepta múltiples nombres      | Recomendado usar SD para varios mapas |
+| Garmin eTrex 30 / 32x      | ✅ Solo `gmapsupp.img`           | ✅ Acepta múltiples nombres      | Probado con éxito con este proyecto |
+| Garmin GPSMAP 64           | ✅ Solo `gmapsupp.img`           | ✅ Acepta múltiples nombres      | Recomendado usar SD para varios mapas |
+| Garmin GPSMAP 65s          | ✅ Solo `gmapsupp.img`           | ✅ Acepta múltiples nombres      | — |
+| Garmin GPSMAP 66i,st,sr | ❌ No reconoce en interna        | ✅ Requiere SD y renombrar a `gmapsupp.img` | ⚠️ Importante: siempre en SD |
+| Garmin GPSMAP 67 / 67i     | ❌ No reconoce en interna        | ✅ Requiere SD y renombrar a `gmapsupp.img` | — |
+| Otros Garmin compatibles   | ✅ Normalmente `gmapsupp.img`    | ✅ Acepta múltiples nombres      | Depende del modelo y firmware |
+
+---
+
 ## 📂 Archivo generado
 
 - `peninsula-gmapsupp.img`: Mapa principal con la región España 🇪🇸 (península).
