@@ -39,7 +39,7 @@ jobs:
       - name: 📦 Install required packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y osmium-tool nsis osmctools jq
+          sudo apt-get install -y osmium-tool nsis osmctools jq mkgmap
 
       - name: 📁 Create required directories
         run: mkdir -p data tools/mkgmap output output/peninsula output/canarias output/baleares bounds sea
@@ -147,10 +147,10 @@ jobs:
           DATE=$(date -r data/islas-baleares-latest.osm.pbf +'%Y-%m-%d' || date +'%Y-%m-%d')
           echo "DATE=$DATE" >> $GITHUB_OUTPUT
 
-      - name: 🛠️ Download and extract mkgmap ${{ env.MKGMAP_VERSION }}
-        run: |
-          curl -L https://www.mkgmap.org.uk/download/mkgmap-${{ env.MKGMAP_VERSION }}.tar.gz \
-            | tar xz -C tools/mkgmap --strip-components=1
+      #- name: 🛠️ Download and extract mkgmap ${{ env.MKGMAP_VERSION }}
+      #  run: |
+      #    curl -L https://www.mkgmap.org.uk/download/mkgmap-${{ env.MKGMAP_VERSION }}.tar.gz \
+      #      | tar xz -C tools/mkgmap --strip-components=1
 
       - name: 🛠️ Download and extract splitter ${{ env.SPLITTER_VERSION }}
         run: |
@@ -219,7 +219,7 @@ jobs:
       - name: 🧭 Build OSM map - Spain, Mainland 🇪🇸
         run: |
           export LANG=C.UTF-8
-          java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
+          java -Xmx8G -XX:+UseG1GC -jar /usr/share/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
             --index \
@@ -252,7 +252,7 @@ jobs:
       - name: 🧭 Build OSM map - Spain, Canary Islands 🇮🇨
         run: |
           export LANG=C.UTF-8
-          java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
+          java -Xmx8G -XX:+UseG1GC -jar /usr/share/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
             --index \
@@ -285,7 +285,7 @@ jobs:
       - name: 🧭 Build OSM map - Spain, Balearic Islands 🏝️
         run: |
           export LANG=C.UTF-8
-          java -Xmx8G -XX:+UseG1GC -jar tools/mkgmap/mkgmap.jar \
+          java -Xmx8G -XX:+UseG1GC -jar /usr/share/mkgmap/mkgmap.jar \
             --gmapsupp \
             --route \
             --index \
