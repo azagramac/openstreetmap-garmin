@@ -158,12 +158,22 @@ jobs:
           curl -L https://www.mkgmap.org.uk/download/splitter-${{ env.SPLITTER_VERSION }}.tar.gz \
             | tar xz -C tools/splitter --strip-components=1
 
-      - name: 📦 Download and extract bounds and sea data
+      - name: 📦 Download and extract bounds and sea data (validated)
         run: |
-          curl -L -o bounds.zip https://www.thkukuk.de/osm/data/bounds-latest.zip
-          curl -L -o sea.zip https://www.thkukuk.de/osm/data/sea-latest.zip
-          unzip -q bounds.zip -d bounds/
-          unzip -q sea.zip -d sea/
+          set -euo pipefail
+          rm -rf bounds sea bounds.zip sea.zip
+          
+          curl -fSL --retry 5 --retry-delay 5 -o bounds.zip https://www.thkukuk.de/osm/data/bounds-latest.zip
+          curl -fSL --retry 5 --retry-delay 5 -o sea.zip   https://www.thkukuk.de/osm/data/sea-latest.zip
+          
+          file bounds.zip
+          unzip -t bounds.zip
+          
+          file sea.zip
+          unzip -t sea.zip
+          
+          unzip bounds.zip -d bounds
+          unzip sea.zip -d sea
 
       - name: 🔀 Split PBF into tiles - Spain, Mainland 🇪🇸
         run: |
