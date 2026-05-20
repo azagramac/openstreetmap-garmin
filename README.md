@@ -1,7 +1,7 @@
 [![🛠️ Build map](https://github.com/azagramac/OSMforGarmin/actions/workflows/workflow-spain.yaml/badge.svg)](https://github.com/azagramac/OSMforGarmin/actions/workflows/workflow-spain.yaml)
 
 # 🛰️ Garmin Map Builder – OpenStreetMap
-<a href="https://wiki.openstreetmap.org/wiki/Mkgmap" target="_blank" rel="noopener noreferrer"> <img width="92" height="92" alt="OpenStreetMap Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Openstreetmap_logo.svg/100px-Openstreetmap_logo.svg.png" /> </a>
+<img width="96" alt="osm-logo" src="https://github.com/user-attachments/assets/cbe6581f-0e95-443f-8d97-7ee3fb2ec22a" />
 
 Compilación de mapas .img compatibles con dispositivos Garmin eTrex 22x / 30x / 32x / GPSMAP 66, 67... y similares, usando datos oficiales de OpenStreetMap.
 
@@ -66,8 +66,7 @@ Compilación de mapas .img compatibles con dispositivos Garmin eTrex 22x / 30x /
 ---
 
 ## 🧪 Environment
-
 - ☕ Java 17
-- 📦 [mkgmap](https://www.mkgmap.org.uk/download/mkgmap.html) `r4923`
+- 📦 [mkgmap](https://www.mkgmap.org.uk/download/mkgmap.html) `r4924`
 - 🔀 [splitter](https://www.mkgmap.org.uk/download/splitter.html) `r654`
 - 🗺️ Datos OSM de [Geofabrik](https://download.geofabrik.de/)
